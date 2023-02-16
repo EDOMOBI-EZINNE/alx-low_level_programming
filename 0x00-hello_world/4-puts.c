@@ -1,10 +1,10 @@
 #!/bin/bash
 /**
-*main - main block
-*Return: 0
+*main - A program that prints a line with puts funtion
+*Return: 0 (success)
 */
 int main(void)
 {
-         puts("\"programmong is like develop a multlingual puzzle");
+         puts("\"programmong is like building a multlingual puzzle");
          return (0);
 }
