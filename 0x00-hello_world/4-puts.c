@@ -1,11 +1,10 @@
 #!/bin/bash
 /**
-*main - Entry point
-*Return: Always 0 (success)
+*main - main block
+*Return: 0
 */
-
 int main(void)
 {
-puts("/"programming is like building a multilinqual puzzle");
-return (0);
+         puts("\"programmong is like develop a multlingual puzzle");
+         return (0);
 }
