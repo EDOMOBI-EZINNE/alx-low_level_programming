@@ -1,19 +1,18 @@
 #include "lists.h"
+#include <stddef.h>
 
 /**
- * list_len - count asingle linked list
- * @h: pointer to the head of the single linked list
- * Return: number of nodes
-*/
+  * list_len - count number of nodes in a list_t
+  * @h: head node
+  * Return: Length of list_t (number)
+  */
 size_t list_len(const list_t *h)
 {
-	list_t *current_node = (list_t *)h;
-	size_t count = 0;
+	unsigned int size;
+	const list_t *tmp;
 
-	while (current_node)
-	{
-		current_node = current_node->next;
-		count++;
-	}
-	return (count);
+	tmp = h, size = 0;
+	while (tmp)
+		size++, tmp = tmp->next;
+	return (size);
 }

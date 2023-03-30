@@ -1,19 +1,21 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * free_list - count asingle linked list
- * @head: pointer to the head of the single linked list
- * Return: nothing
-*/
+  * free_list - frees a list_t list
+  * @head: head node
+  * Return: void
+  */
 void free_list(list_t *head)
 {
-	list_t *current;
+	list_t *current, *next;
 
-	while (head)
+	current = head;
+	while (current)
 	{
-		current = head->next;
-		free(head->str);
-		free(head);
-		head = current;
+		next = current->next;
+		free(current->str);
+		free(current);
+		current = next;
 	}
 }
